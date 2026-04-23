@@ -1,0 +1,52 @@
+site_name: GitHub Copilot Agents Hub
+site_description: A comprehensive guide to GitHub Copilot agents, instructions, skills, and prompts
+site_author: Copilot Agents Hub Team
+docs_dir: docs
+repo_url: https://github.com/YOUR-ORG/copilot-agents-hub
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - abbr
+  - attr_list
+  - md_in_html
+  - pymdownx.snippets:
+      base_path: docs
+
+nav:
+  - Home: index.md
+  - Project Summary: project-summary.md
+  - Fundamentals:
+      - "What Are Agents, Instructions & Skills?": fundamentals/01-core-concepts.md
+      - "Copilot Agents vs Agentic AI Development": fundamentals/02-copilot-agents-vs-agentic-ai.md
+      - "Slash Commands vs Agents": fundamentals/03-slash-commands-vs-agents.md
+  - Intermediate Concepts:
+      - "How the Primitives Work Together": intermediate/01-working-together.md
+  - Advanced Concepts:
+      - "Advanced Patterns & Workflows": advanced/01-advanced-patterns.md
+  - IDE Compatibility:
+      - "Supported IDEs & Editors": ide-compatibility/01-overview.md
+  - Agents Index: agents-index.md
+  - Setup: setup.md
