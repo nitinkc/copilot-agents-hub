@@ -2,7 +2,7 @@ site_name: GitHub Copilot Agents Hub
 site_description: A comprehensive guide to GitHub Copilot agents, instructions, skills, and prompts
 site_author: Copilot Agents Hub Team
 docs_dir: docs
-repo_url: https://github.com/YOUR-ORG/copilot-agents-hub
+repo_url: https://github.com/nitinkc/copilot-agents-hub
 
 theme:
   name: material
@@ -13,9 +13,20 @@ theme:
     - toc.integrate
     - content.code.copy
   palette:
-    - scheme: default
-      primary: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
       accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 markdown_extensions:
   - admonition

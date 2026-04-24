@@ -165,6 +165,7 @@ This workspace has **auto-enforced style rules** and **agent preferences**:
 - **Markdown files**: Use 2-space indentation, blank lines before lists
 - **YAML config**: Validate before committing
 - **Commit messages**: `Add:`, `Update:`, `Remove:` prefixes required
+- **MkDocs theme**: Uses `mkdocs-material` with light/dark mode toggle; palette uses `scheme: default` (light) and `scheme: slate` (dark), both with `primary: teal` and `accent: blue`. Do not remove or override the `palette` toggle configuration in `mkdocs.yml`.
 - *(Customize in `.github/copilot-instructions.md`)*
 
 ---
