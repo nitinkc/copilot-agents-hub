@@ -28,11 +28,11 @@ A **slash command** invokes a specific, parameterized task. It runs once, comple
 
 **What they execute:**
 
-| Type | File | Purpose |
-|---|---|---|
-| **Prompts** | `.prompt.md` | Single-purpose, parameterized workflows with inputs |
-| **Skills** | `SKILL.md` | Multi-step workflows bundled with templates and scripts |
-| **Built-in** | — | Copilot's native commands: `/explain`, `/fix`, `/optimize` |
+| Type         | File         | Purpose                                                    |
+|:-------------|:-------------|:-----------------------------------------------------------|
+| **Prompts**  | `.prompt.md` | Single-purpose, parameterized workflows with inputs        |
+| **Skills**   | `SKILL.md`   | Multi-step workflows bundled with templates and scripts    |
+| **Built-in** | —            | Copilot's native commands: `/explain`, `/fix`, `/optimize` |
 
 **Behavior:**
 
@@ -69,12 +69,12 @@ An **@ reference** activates something in the context of the current conversatio
 
 **What they activate:**
 
-| Type | Reference | Effect |
-|---|---|---|
-| **Agent** | `@agent-name` | Loads `.agent.md` — persistent persona, tool restrictions, instructions |
-| **Workspace** | `@workspace` | Pulls repo structure and metadata into context |
-| **File** | `@#file.ts` | Includes specific file content in context |
-| **Code symbol** | `@ClassName`, `@functionName` | Brings that symbol's definition into context |
+| Type            | Reference                     | Effect                                                                  |
+|:----------------|:------------------------------|:------------------------------------------------------------------------|
+| **Agent**       | `@agent-name`                 | Loads `.agent.md` — persistent persona, tool restrictions, instructions |
+| **Workspace**   | `@workspace`                  | Pulls repo structure and metadata into context                          |
+| **File**        | `@#file.ts`                   | Includes specific file content in context                               |
+| **Code symbol** | `@ClassName`, `@functionName` | Brings that symbol's definition into context                            |
 
 **Behavior:**
 
@@ -105,17 +105,17 @@ Agent: Runs coverage check, respects tool restrictions, reports
 
 ## Direct Comparison
 
-| Aspect | `/` Slash Command | `@` Agent/Context |
-|---|---|---|
-| **Activation** | Explicit invocation for one task | Active for entire session |
-| **Persistence** | Single-use | Persists across multiple turns |
-| **Parameter syntax** | `/prompt-name param=value` | `@agent-name [then ask questions]` |
-| **Scope** | Isolated operation | Session-wide ruleset |
-| **Tool restrictions** | Not enforced | Enforced throughout session |
-| **Instructions** | Applied once to that task | Applied to every response |
-| **Context carry-over** | None (unless in agent session) | Yes (full context maintained) |
-| **Best for** | Isolated, parameterized tasks | Multi-turn workflows with consistent rules |
-| **Examples** | `/new-doc-section`, `/fix-imports` | `@mkdocs-content`, `@code-reviewer` |
+| Aspect                 | `/` Slash Command                  | `@` Agent/Context                          |
+|:-----------------------|:-----------------------------------|:-------------------------------------------|
+| **Activation**         | Explicit invocation for one task   | Active for entire session                  |
+| **Persistence**        | Single-use                         | Persists across multiple turns             |
+| **Parameter syntax**   | `/prompt-name param=value`         | `@agent-name [then ask questions]`         |
+| **Scope**              | Isolated operation                 | Session-wide ruleset                       |
+| **Tool restrictions**  | Not enforced                       | Enforced throughout session                |
+| **Instructions**       | Applied once to that task          | Applied to every response                  |
+| **Context carry-over** | None (unless in agent session)     | Yes (full context maintained)              |
+| **Best for**           | Isolated, parameterized tasks      | Multi-turn workflows with consistent rules |
+| **Examples**           | `/new-doc-section`, `/fix-imports` | `@mkdocs-content`, `@code-reviewer`        |
 
 ---
 

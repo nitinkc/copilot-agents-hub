@@ -13,15 +13,15 @@ GitHub Copilot agents and their primitives are not exclusively a VS Code feature
 
 ## Support Matrix
 
-| Primitive | VS Code | JetBrains IDEs | Visual Studio | Vim/Neovim | GitHub.com | CLI |
-|---|---|---|---|---|---|---|
-| **Agents** (`.agent.md`) | ✅ Full | ⚠️ Partial (via chat) | ❌ | ❌ | ❌ | ❌ |
-| **Instructions** (`.instructions.md`) | ✅ Full | ✅ `applyTo` supported | ⚠️ Partial | ❌ | ❌ | ❌ |
-| **Prompts** (`.prompt.md`) | ✅ Full | ✅ Slash commands | ⚠️ Partial | ❌ | ❌ | ❌ |
-| **Skills** (`SKILL.md`) | ✅ Full | ⚠️ Partial | ❌ | ❌ | ❌ | ❌ |
-| **Copilot Chat** | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ (gh copilot) |
-| **Workspace Instructions** | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ |
-| **Inline Completions** | ✅ | ✅ | ✅ | ✅ | N/A | N/A |
+| Primitive                             | VS Code | JetBrains IDEs        | Visual Studio | Vim/Neovim | GitHub.com | CLI            |
+|:--------------------------------------|:--------|:----------------------|:--------------|:-----------|:-----------|:---------------|
+| **Agents** (`.agent.md`)              | ✅ Full  | ⚠️ Partial (via chat) | ❌             | ❌          | ❌          | ❌              |
+| **Instructions** (`.instructions.md`) | ✅ Full  | ✅ `applyTo` supported | ⚠️ Partial    | ❌          | ❌          | ❌              |
+| **Prompts** (`.prompt.md`)            | ✅ Full  | ✅ Slash commands      | ⚠️ Partial    | ❌          | ❌          | ❌              |
+| **Skills** (`SKILL.md`)               | ✅ Full  | ⚠️ Partial            | ❌             | ❌          | ❌          | ❌              |
+| **Copilot Chat**                      | ✅       | ✅                     | ✅             | ❌          | ✅          | ✅ (gh copilot) |
+| **Workspace Instructions**            | ✅       | ✅                     | ✅             | ❌          | ✅          | ✅              |
+| **Inline Completions**                | ✅       | ✅                     | ✅             | ✅          | N/A        | N/A            |
 
 ---
 
@@ -47,14 +47,14 @@ VS Code has the most complete implementation of the Copilot agent system. All fo
 
 **File locations (VS Code):**
 
-| Scope | Path |
-|---|---|
-| Workspace agents | `.github/agents/` |
-| Workspace prompts | `.github/prompts/` |
-| Workspace instructions | `.github/instructions/` |
-| User-level (macOS) | `~/Library/Application Support/Code/User/prompts/` |
-| User-level (Linux) | `~/.config/Code/User/prompts/` |
-| User-level (Windows) | `%APPDATA%\Code\User\prompts\` |
+| Scope                  | Path                                               |
+|:-----------------------|:---------------------------------------------------|
+| Workspace agents       | `.github/agents/`                                  |
+| Workspace prompts      | `.github/prompts/`                                 |
+| Workspace instructions | `.github/instructions/`                            |
+| User-level (macOS)     | `~/Library/Application Support/Code/User/prompts/` |
+| User-level (Linux)     | `~/.config/Code/User/prompts/`                     |
+| User-level (Windows)   | `%APPDATA%\Code\User\prompts\`                     |
 
 ---
 

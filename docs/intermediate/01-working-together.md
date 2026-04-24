@@ -77,10 +77,10 @@ Loaded on demand when the agent needs detailed template knowledge for creating n
 
 ## Scoping: Workspace vs User Level
 
-| Scope | Location | Who Sees It | Version Controlled |
-|---|---|---|---|
-| Workspace | `.github/agents/`, `.github/prompts/`, `.github/instructions/` | All team members | Yes — committed to Git |
-| User | `~/…/Code/User/prompts/` | Only you, all workspaces | Via VS Code settings sync |
+| Scope     | Location                                                       | Who Sees It              | Version Controlled        |
+|:----------|:---------------------------------------------------------------|:-------------------------|:--------------------------|
+| Workspace | `.github/agents/`, `.github/prompts/`, `.github/instructions/` | All team members         | Yes — committed to Git    |
+| User      | `~/…/Code/User/prompts/`                                       | Only you, all workspaces | Via VS Code settings sync |
 
 **Rule of thumb:**
 
@@ -93,29 +93,29 @@ Loaded on demand when the agent needs detailed template knowledge for creating n
 
 ### Software Development Agents
 
-| Use Case | Agent Role | Tools Needed |
-|---|---|---|
-| Code review | Read-only reviewer — no write access | `read_file`, `grep_search`, `semantic_search` |
-| Test writer | Reads source, writes test files | `read_file`, `create_file`, `replace_string_in_file` |
-| Refactoring assistant | Reads and rewrites code | `read_file`, `replace_string_in_file`, `run_in_terminal` |
-| Dependency auditor | Scans manifests, reports issues | `file_search`, `grep_search`, `fetch_webpage` |
-| CI debugger | Reads logs, suggests fixes | `read_file`, `get_errors`, `run_in_terminal` |
+| Use Case              | Agent Role                           | Tools Needed                                             |
+|:----------------------|:-------------------------------------|:---------------------------------------------------------|
+| Code review           | Read-only reviewer — no write access | `read_file`, `grep_search`, `semantic_search`            |
+| Test writer           | Reads source, writes test files      | `read_file`, `create_file`, `replace_string_in_file`     |
+| Refactoring assistant | Reads and rewrites code              | `read_file`, `replace_string_in_file`, `run_in_terminal` |
+| Dependency auditor    | Scans manifests, reports issues      | `file_search`, `grep_search`, `fetch_webpage`            |
+| CI debugger           | Reads logs, suggests fixes           | `read_file`, `get_errors`, `run_in_terminal`             |
 
 ### Documentation Agents
 
-| Use Case | Agent Role | Tools Needed |
-|---|---|---|
-| MkDocs author | Creates and updates doc files | `read_file`, `create_file`, `replace_string_in_file` |
-| API doc generator | Reads source, writes OpenAPI docs | `read_file`, `create_file`, `semantic_search` |
-| Changelog writer | Reads git diff, writes changelog | `run_in_terminal`, `create_file` |
+| Use Case          | Agent Role                        | Tools Needed                                         |
+|:------------------|:----------------------------------|:-----------------------------------------------------|
+| MkDocs author     | Creates and updates doc files     | `read_file`, `create_file`, `replace_string_in_file` |
+| API doc generator | Reads source, writes OpenAPI docs | `read_file`, `create_file`, `semantic_search`        |
+| Changelog writer  | Reads git diff, writes changelog  | `run_in_terminal`, `create_file`                     |
 
 ### Data & DevOps Agents
 
-| Use Case | Agent Role | Tools Needed |
-|---|---|---|
-| SQL schema reviewer | Reads migration files, checks for issues | `read_file`, `grep_search` |
-| Infrastructure linter | Validates Terraform/Helm files | `read_file`, `run_in_terminal` |
-| Observability assistant | Reads logs and metrics queries | `read_file`, `fetch_webpage` |
+| Use Case                | Agent Role                               | Tools Needed                   |
+|:------------------------|:-----------------------------------------|:-------------------------------|
+| SQL schema reviewer     | Reads migration files, checks for issues | `read_file`, `grep_search`     |
+| Infrastructure linter   | Validates Terraform/Helm files           | `read_file`, `run_in_terminal` |
+| Observability assistant | Reads logs and metrics queries           | `read_file`, `fetch_webpage`   |
 
 ---
 
