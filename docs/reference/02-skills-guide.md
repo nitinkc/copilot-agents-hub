@@ -1,14 +1,18 @@
-# Skills Directory
+# Skills Guide
 
-This directory contains **Copilot Skills** — bundled reference libraries, templates, and tools that appear as `/skill-name` commands in Copilot Chat.
+Reference documentation for creating and using Copilot skills.
+
+---
 
 ## What Are Skills?
 
 Skills are:
 - **Reference libraries** with actionable templates
 - **Multi-asset bundles** (markdown guides + code templates + checklists)
-- **Reusable across projects** — copy paste what you need
+- **Reusable across projects** — copy and paste what you need
 - **Accessible via `/skill-name`** in Copilot Chat
+
+---
 
 ## Available Skills
 
@@ -22,12 +26,15 @@ Complete MkDocs reference library with:
 - Validation checklists
 - Setup guides for new projects
 
-**Location:** `mkdocs-docs/`  
-**Access:** `/mkdocs-docs` in chat
+**Access:** `/mkdocs-docs` in Copilot Chat
 
-## Creating a Skill
+*(More skills coming)*
 
-### Directory Structure
+---
+
+## Creating a New Skill
+
+### 1. Directory Structure
 
 ```
 .github/skills/skill-name/
@@ -42,7 +49,7 @@ Complete MkDocs reference library with:
 └── README.md                   ← How to use this skill (optional)
 ```
 
-### SKILL.md Template
+### 2. Create SKILL.md
 
 ```markdown
 ---
@@ -71,9 +78,9 @@ Brief introduction to the skill.
 
 Copy this directly into your project:
 
-```yaml
+\`\`\`yaml
 # Your template here
-```
+\`\`\`
 
 ---
 
@@ -100,37 +107,53 @@ Best practices and examples.
 Links to official docs, related skills, etc.
 ```
 
-## Best Practices
+### 3. Add Supporting Files
 
-1. **Self-contained** — Skill should work independently
-2. **CopyPaste-ready** — Templates should be directly usable
-3. **Well-documented** — Include examples and gotchas
-4. **Versioned assets** — Include version numbers in templates
-5. **Related resources** — Link to other skills and documentation
+- **SETUP-GUIDE.md** — Step-by-step setup instructions
+- **templates/** — Reusable code/config templates
+- **examples/** — Working example implementations
 
-## Directory Structure
+### 4. Update Registry
 
-```
-.github/skills/
-├── skill-name-1/
-│   ├── SKILL.md
-│   ├── SETUP-GUIDE.md
-│   ├── templates/
-│   └── examples/
-├── skill-name-2/
-│   ├── SKILL.md
-│   └── templates/
-└── README.md (this file)
-```
+Add entry to `.github/skills/README.md` (or equivalent registry).
 
-## Examples to Create
+### 5. Test and Deploy
 
-- `rest-api-docs/` — REST API documentation patterns
-- `python-testing/` — Unit testing templates
-- `security-checklist/` — Security audit checklists
-- `docker-setup/` — Docker configuration templates
-- *(More coming)*
+- Verify SKILL.md frontmatter is valid YAML
+- Test in Copilot Chat: `/skill-name`
+- Commit and push to GitHub
 
 ---
 
-See [README.md](../../README.md) for setup and usage instructions.
+## Skill Design Best Practices
+
+### Asset-Focused
+
+Skills should provide **immediately usable templates** and reference material:
+- Configuration files
+- Code templates
+- Markdown examples
+- Validation checklists
+- Setup procedures
+
+### Clear Level Indication
+
+Mark skill complexity:
+- **Beginner** — No prior knowledge needed
+- **Intermediate** — Some domain knowledge assumed
+- **Advanced** — Expert-level concepts
+
+### Single Responsibility
+
+Each skill covers one domain:
+- ✅ MkDocs documentation setup
+- ✅ REST API patterns
+- ❌ "Documentation and APIs" (too broad)
+
+### Self-Contained
+
+Skills should be independent:
+- Include all templates needed
+- Link to external docs only for deep learning
+- No cross-skill dependencies
+

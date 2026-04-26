@@ -6,12 +6,12 @@ Detailed instructions for setting up Copilot agents on VS Code or IntelliJ acros
 
 ## 📋 Table of Contents
 
-1. [Quick Setup (All OSes)](#quick-setup--all-oses)
-2. [VS Code Setup (Detailed)](#vs-code-setup--detailed)
-3. [IntelliJ Setup (Detailed)](#intellij-setup--detailed)
-4. [Verify Installation](#verify-installation)
-5. [Update and Sync](#update-and-sync)
-6. [Troubleshooting](#troubleshooting)
+1. Quick Setup (All OSes)
+2. VS Code Setup (Detailed)
+3. IntelliJ Setup (Detailed)
+4. Verify Installation
+5. Update and Sync
+6. Troubleshooting
 
 ---
 
@@ -42,7 +42,9 @@ cd copilot-agents-hub
 powershell -ExecutionPolicy Bypass -File scripts/setup-vscode.ps1
 ```
 
-**Done!** Restart your IDE and agents are ready to use.
+**Done!** Restart VS Code and agents are ready to use.
+
+For IntelliJ instructions, see [IDE Compatibility](ide-compatibility/01-overview.md). For complete reference on agents, see [Agents Guide](reference/01-agents-guide.md).
 
 ---
 
@@ -202,7 +204,7 @@ cp .github/agents/*.agent.md ~/.config/JetBrains/IntelliJIdea2024.1/options/copi
 
 #### Step 2: Configure IDE Settings
 
-See [`.jetbrains/copilot-config.md`](.jetbrains/copilot-config.md) for detailed IDE-specific configuration.
+See [IDE Compatibility](ide-compatibility/01-overview.md) for detailed IDE-specific configuration.
 
 #### Step 3: Restart IntelliJ
 
@@ -395,9 +397,9 @@ After setup, test an agent:
 ## Next Steps
 
 - ✅ Setup complete!
-- 📚 Read [AGENTS-INDEX.md](../AGENTS-INDEX.md) to learn about available agents
-- 🚀 Check [README.md](../README.md) for usage examples
-- ➕ [Add your own agents](.github/agents/README.md) following the template
+- 📚 Read [Home](index.md) for overview and quick start
+- 🚀 Check [Agents Index](agents-index.md) for available agents
+- ➕ [Create your own agents](reference/01-agents-guide.md) with our guide
 
 ---
 
@@ -417,7 +419,3 @@ After setup, test an agent:
 2. **Run validation:** `bash scripts/validate-agents.sh`
 3. **Review logs:** Check VS Code Output panel (View → Output)
 4. **Read troubleshooting:** Section above
-
----
-
-**Last Updated:** April 23, 2026

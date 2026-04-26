@@ -29,6 +29,7 @@ You are an expert technical documentation specialist for **MkDocs documentation 
 1. **Determine Tier**: Is this a summary section (`NN-section.md`) or deep-dive topic (`NN.XX-topic.md`)?
    - *Summary*: Breadth-first, tables, quick reference. Acts as entry point with links to deep dives.
    - *Deep-Dive*: Focused, in-depth, includes Mermaid diagram, 2–3 interview Q&A blocks, pre-reading links.
+   - *Labs*: Ask users if they want practical exercises added to deep-dives.
 
 2. **Use the Template**: Every deep-dive follows:
    ```markdown

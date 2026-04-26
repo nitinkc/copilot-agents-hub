@@ -48,7 +48,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Project Summary: project-summary.md
   - Fundamentals:
       - "What Are Agents, Instructions & Skills?": fundamentals/01-core-concepts.md
       - "Copilot Agents vs Agentic AI Development": fundamentals/02-copilot-agents-vs-agentic-ai.md
@@ -57,6 +56,11 @@ nav:
       - "How the Primitives Work Together": intermediate/01-working-together.md
   - Advanced Concepts:
       - "Advanced Patterns & Workflows": advanced/01-advanced-patterns.md
+  - Reference Guides:
+      - "Agents": reference/01-agents-guide.md
+      - "Skills": reference/02-skills-guide.md
+      - "Prompts": reference/03-prompts-guide.md
+      - "Instructions": reference/04-instructions-guide.md
   - IDE Compatibility:
       - "Supported IDEs & Editors": ide-compatibility/01-overview.md
   - Agents Index: agents-index.md

@@ -6,9 +6,9 @@ Registry of all available Copilot agents in this hub. Use the `@` picker in VS C
 
 ## Available Agents
 
-| Agent Name | Category | Purpose | File | Status |
-|---|---|---|---|---|
-| `mkdocs-content` | Documentation | Create and manage MkDocs documentation with two-tier content model | [01-mkdocs-content.agent.md](.github/agents/01-mkdocs-content.agent.md) | ✅ Active |
+| Agent Name | Category | Purpose | Status |
+|---|---|---|---|
+| `mkdocs-content` | Documentation | Create and manage MkDocs documentation with two-tier content model | ✅ Active |
 
 ---
 
@@ -36,6 +36,7 @@ Registry of all available Copilot agents in this hub. Use the `@` picker in VS C
 **Purpose:** Specialized for creating and managing MkDocs documentation projects.
 
 **Use when:**
+
 - Creating new documentation sections or articles
 - Managing MkDocs project structure and navigation
 - Ensuring style consistency across markdown files
@@ -43,13 +44,14 @@ Registry of all available Copilot agents in this hub. Use the `@` picker in VS C
 - Updating mkdocs.yml navigation
 
 **Capabilities:**
+
 - ✅ Create summary articles (NN-section.md)
 - ✅ Create deep-dive articles (NN.XX-topic.md) with Mermaid diagrams
 - ✅ Generate interview Q&A blocks
 - ✅ Manage cross-references and breadcrumbs
 - ✅ Validate documentation structure
 
-**File:** [.github/agents/01-mkdocs-content.agent.md](.github/agents/01-mkdocs-content.agent.md)
+**Learn More:** See [reference/01-agents-guide.md](reference/01-agents-guide.md) for how agents work.
 
 **Example Prompts:**
 ```
@@ -66,9 +68,10 @@ Registry of all available Copilot agents in this hub. Use the `@` picker in VS C
 
 ## Adding New Agents
 
-Want to create a new agent? See [.github/agents/README.md](.github/agents/README.md) for detailed instructions.
+Want to create a new agent? See [Agents Guide](reference/01-agents-guide.md) for detailed instructions.
 
-**Quick checklist:**
+Quick checklist:
+
 1. Create `.github/agents/NN-name.agent.md`
 2. Add YAML frontmatter (name, description, temperature)
 3. Write agent instructions (core responsibilities, operating principles)
@@ -80,14 +83,7 @@ Want to create a new agent? See [.github/agents/README.md](.github/agents/README
 
 ## Related Documentation
 
-- **README.md** — Project overview and quick start
-- **SETUP.md** — Detailed setup for VS Code and IntelliJ
-- **.github/agents/README.md** — How to create agents
-- **.github/copilot-instructions.md** — Workspace rules
-- **.jetbrains/copilot-config.md** — IntelliJ setup guide
-
----
-
-**Last Updated:** April 23, 2026  
-**Total Agents:** 1 (active)  
-**Next Agent:** Coming soon!
+- [Home](index.md) — Project overview and quick start
+- [Setup Guide](setup.md) — Detailed setup for VS Code and IntelliJ
+- [Agents Guide](reference/01-agents-guide.md) — How to create agents
+- [Skills Guide](reference/02-skills-guide.md) — How to create skills
