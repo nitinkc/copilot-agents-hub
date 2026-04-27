@@ -2,6 +2,7 @@
 
 Reusable repository for managing custom GitHub Copilot agents, prompts, instructions, and skills — synced across machines via Git.
 
+[https://nitinkc.github.io/copilot-agents-hub/](https://nitinkc.github.io/copilot-agents-hub/)
 ## Quick Start
 
 ```bash
