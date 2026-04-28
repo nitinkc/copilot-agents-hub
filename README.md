@@ -49,6 +49,49 @@ mkdocs build
 | [Advanced](docs/advanced/01-advanced-patterns.md) | Hooks, multi-agent pipelines, MCP, anti-patterns |
 | [IDE Compatibility](docs/ide-compatibility/01-overview.md) | VS Code, JetBrains, Visual Studio, Vim, CLI |
 
+## 🚀 scaffold-learning-site — Quick Usage Demo
+
+Use `/scaffold-learning-site` to generate a complete MkDocs learning tutorial project for any topic.
+
+**Invoke it in Copilot Chat like this:**
+
+```
+/scaffold-learning-site
+Topic: RAG Search & Vector Databases
+Key questions:
+- How does cosine similarity work mathematically?
+- How do you prevent "Order #1766" matching "Order #1767"?
+- What is the difference between lexical and semantic search?
+```
+
+```
+/scaffold-learning-site
+Topic: Database Engineering
+Sections: SQL vs NoSQL, ACID, Normalization, Indexing, Replication, Caching
+Cloud implementations: Spanner, BigQuery, DynamoDB, Cassandra, MongoDB, PostgreSQL
+```
+
+**Where each piece lives:**
+
+| File type | Location | Purpose |
+|---|---|---|
+| **Prompt** — `/scaffold-learning-site` | `.github/prompts/scaffold-learning-site.prompt.md` | The invocable command; tells Copilot what to do |
+| **Skill** — reference library | `.github/skills/scaffold-learning-site/SKILL.md` | Conventions, token map, template index |
+| **Templates** | `.github/skills/scaffold-learning-site/templates/` | Reusable file starters (mkdocs.yml, CSS, JS, article layouts) |
+| **Instructions** — auto-rules | `.github/instructions/application-instructions/mkdocs.instructions.md` | Style rules applied automatically when editing `docs/**/*.md` or `mkdocs.yml` |
+| **Agent** — persona | `.github/agents/01-mkdocs-content.agent.md` | `@mkdocs-content` — manages article creation, nav, cross-references |
+
+**Rule of thumb for where to put what:**
+
+| Content type | Goes in |
+|---|---|
+| AI persona, role, decision logic, step-by-step workflows | **Agent** (`.agent.md`) |
+| Coding/style rules, known issues, templates auto-applied to files | **Instructions** (`.instructions.md`) |
+| Single-shot reusable task commands | **Prompts** (`.prompt.md`) |
+| Reference libraries, file templates, scaffolding patterns | **Skills** (`SKILL.md` + `templates/`) |
+
+---
+
 ## Agent Registry
 
 See [docs/agents-index.md](docs/agents-index.md) for all available agents.
