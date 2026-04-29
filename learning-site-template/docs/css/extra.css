@@ -1,0 +1,440 @@
+/* ============================================================
+   Learning Site Template — Extra CSS
+   Enhances Material theme with custom styling for:
+   - Abbreviation hover tooltips
+   - Details/summary blocks
+   - Math equation spacing
+   - Mermaid diagram styling
+   - Theme-aware colors (light + dark mode)
+   ============================================================ */
+
+/* ============================================================
+   ROOT COLORS & VARIABLES
+   ============================================================ */
+:root {
+  --primary-color: #1976d2;      /* Blue */
+  --accent-color: #ff9800;       /* Orange */
+  --success-color: #2e7d32;      /* Green */
+  --warning-color: #f57f17;      /* Amber */
+  --danger-color: #c62828;       /* Red */
+}
+
+/* ============================================================
+   ABBREVIATIONS (HOVER GLOSSARY)
+   ============================================================ */
+abbr[title] {
+  text-decoration: underline dotted var(--primary-color);
+  cursor: help;
+  font-weight: inherit;
+  transition: color 0.2s ease;
+}
+
+abbr[title]:hover {
+  color: var(--accent-color);
+  text-decoration-color: var(--accent-color);
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] abbr[title] {
+  text-decoration-color: var(--accent-color);
+}
+
+[data-md-color-scheme="slate"] abbr[title]:hover {
+  color: #ffb74d;  /* Lighter orange for dark mode */
+}
+
+/* ============================================================
+   DETAILS / COLLAPSIBLE BLOCKS (??? question syntax)
+   ============================================================ */
+details {
+  margin: 1.5em 0;
+  border-left: 4px solid var(--primary-color);
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  background: rgba(25, 118, 210, 0.05);  /* Light blue background */
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-color);
+  user-select: none;
+  outline: none;
+  padding: 0.5em 0;
+  list-style: none;
+  transition: color 0.2s ease;
+}
+
+details summary:hover {
+  color: var(--accent-color);
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+  color: var(--accent-color);
+}
+
+details[open] {
+  background: rgba(25, 118, 210, 0.08);  /* Slightly more opaque when open */
+}
+
+/* Dark mode for details */
+[data-md-color-scheme="slate"] details {
+  background: rgba(255, 152, 0, 0.05);
+  border-left-color: var(--accent-color);
+}
+
+[data-md-color-scheme="slate"] details summary {
+  color: #ffb74d;
+}
+
+[data-md-color-scheme="slate"] details summary:hover {
+  color: #ffc857;
+}
+
+/* ============================================================
+   ADMONITIONS (note, info, warning, danger)
+   ============================================================ */
+.admonition {
+  margin: 1.5em 0;
+  padding: 0.75em 1em;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.admonition.note {
+  background: rgba(25, 118, 210, 0.05);
+  border-left-color: var(--primary-color);
+}
+
+.admonition.info {
+  background: rgba(0, 172, 193, 0.05);
+  border-left-color: #00acc1;
+}
+
+.admonition.warning {
+  background: rgba(245, 127, 23, 0.05);
+  border-left-color: var(--warning-color);
+}
+
+.admonition.danger {
+  background: rgba(198, 40, 40, 0.05);
+  border-left-color: var(--danger-color);
+}
+
+.admonition.success {
+  background: rgba(46, 125, 50, 0.05);
+  border-left-color: var(--success-color);
+}
+
+.admonition > .admonition-title {
+  font-weight: 600;
+  margin: 0 0 0.5em 0;
+}
+
+/* ============================================================
+   MATH EQUATIONS (KaTeX / MathJax)
+   ============================================================ */
+.arithmatex {
+  overflow-x: auto;
+  margin: 1.5em 0;
+  padding: 0.75em 1em;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.03);
+  line-height: 1.6;
+}
+
+.arithmatex.display {
+  text-align: center;
+}
+
+/* Dark mode math block */
+[data-md-color-scheme="slate"] .arithmatex {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================================
+   MERMAID DIAGRAMS
+   ============================================================ */
+.mermaid {
+  text-align: center;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Mermaid SVG styling */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   CODE BLOCKS
+   ============================================================ */
+.md-typeset code {
+  padding: 0.15em 0.35em;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.md-typeset pre {
+  margin: 1.5em 0;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.md-typeset .highlight {
+  background: rgb(238, 238, 238);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight {
+  background: rgb(46, 52, 56);
+}
+
+/* Copy button spacing */
+.md-clipboard {
+  margin-top: 0.25em;
+  transition: all 0.2s ease;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  padding: 0.75em;
+  text-align: left;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(25, 118, 210, 0.05);
+}
+
+/* Dark mode tables */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
+  background-color: rgba(255, 152, 0, 0.05);
+}
+
+/* ============================================================
+   LEVEL BADGES (Beginner, Intermediate, Advanced)
+   ============================================================ */
+.badge-beginner {
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.badge-intermediate {
+  color: var(--warning-color);
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+.badge-advanced {
+  color: var(--danger-color);
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+.md-typeset h1 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.md-typeset h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(25, 118, 210, 0.1);
+  padding-bottom: 0.5em;
+}
+
+.md-typeset h3 {
+  margin-top: 1.25em;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+/* ============================================================
+   BLOCKQUOTES
+   ============================================================ */
+.md-typeset blockquote {
+  border-left: 4px solid var(--primary-color);
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(25, 118, 210, 0.03);
+  border-radius: 4px 0 0 4px;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 152, 0, 0.03);
+  border-left-color: var(--accent-color);
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+.md-typeset a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--accent-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #ffc857;
+}
+
+/* ============================================================
+   LISTS
+   ============================================================ */
+.md-typeset ul,
+.md-typeset ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+.md-typeset li {
+  margin: 0.5em 0;
+  line-height: 1.6;
+}
+
+/* Add blank line before lists (as per best practices) */
+.md-typeset > ul,
+.md-typeset > ol {
+  margin-top: 1.5em;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 600px) {
+  .mermaid {
+    margin: 1.5em 0;
+    min-height: 150px;
+    font-size: 0.9em;
+  }
+
+  .md-typeset table:not([class]) {
+    font-size: 0.85em;
+  }
+
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.5em;
+  }
+
+  .arithmatex {
+    font-size: 0.9em;
+  }
+}
+
+/* ============================================================
+   FOOTER & ATTRIBUTION
+   ============================================================ */
+.md-typeset .md-footer-meta {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 2em;
+  padding-top: 1em;
+  font-size: 0.85em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-footer-meta {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+/* Warning/attention styling */
+.attention {
+  padding: 0.75em;
+  border-left: 4px solid var(--warning-color);
+  background: rgba(245, 127, 23, 0.05);
+  border-radius: 4px;
+}
+
+/* Success/checkmark styling */
+.success {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+/* Keyboard key styling */
+kbd {
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 0.15em 0.4em;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+[data-md-color-scheme="slate"] kbd {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+  /* Adjustments for printing */
+  .md-nav,
+  .md-header,
+  .md-footer {
+    display: none;
+  }
+
+  body {
+    max-width: 100%;
+  }
+
+  .md-main {
+    padding: 0;
+  }
+
+  /* Print in color */
+  details {
+    border-left: 2px solid var(--primary-color);
+  }
+
+  .arithmatex {
+    page-break-inside: avoid;
+  }
+
+  .mermaid {
+    page-break-inside: avoid;
+  }
+}
