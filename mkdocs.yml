@@ -8,7 +8,7 @@ theme:
   name: material
   features:
     - navigation.tabs
-    - navigation.sections
+    - navigat ion.sections
     - navigation.expand
     - toc.integrate
     - content.code.copy
@@ -31,6 +31,10 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.inlinehilite
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -45,6 +49,10 @@ markdown_extensions:
   - md_in_html
   - pymdownx.snippets:
       base_path: docs
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  - js/mermaid-init.js
 
 nav:
   - Home: index.md
