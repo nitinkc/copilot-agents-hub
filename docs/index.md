@@ -31,15 +31,15 @@ Done! You now have access to all custom agents across your machines.
 
 This documentation is organized into increasing levels of depth:
 
-| Level | What You Will Learn |
-|---|---|
-| [Fundamentals](fundamentals/01-core-concepts.md) | What agents, instructions, skills, and prompts are and why they exist |
-| [Clarification](fundamentals/02-copilot-agents-vs-agentic-ai.md) | How Copilot agents differ from broader agentic AI systems |
-| [Slash Commands vs Agents](fundamentals/03-slash-commands-vs-agents.md) | Understand `/` (one-off tasks) vs `@` (persistent agent context) |
-| [Intermediate](intermediate/01-working-together.md) | How the primitives compose, configuration patterns, and real-world use cases |
-| [Advanced](advanced/01-advanced-patterns.md) | Hooks, multi-agent workflows, scoping, tool restrictions, and anti-patterns |
-| [IDE Compatibility](ide-compatibility/01-overview.md) | Which editors support each primitive and how to configure them |
-| [Reference Guides](reference/01-agents-guide.md) | Creating your own agents, skills, prompts, and instructions |
+| Level                                                                   | What You Will Learn                                                          |
+|:------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
+| [Fundamentals](fundamentals/01-core-concepts.md)                        | What agents, instructions, skills, and prompts are and why they exist        |
+| [Clarification](fundamentals/02-copilot-agents-vs-agentic-ai.md)        | How Copilot agents differ from broader agentic AI systems                    |
+| [Slash Commands vs Agents](fundamentals/03-slash-commands-vs-agents.md) | Understand `/` (one-off tasks) vs `@` (persistent agent context)             |
+| [Intermediate](intermediate/01-working-together.md)                     | How the primitives compose, configuration patterns, and real-world use cases |
+| [Advanced](advanced/01-advanced-patterns.md)                            | Hooks, multi-agent workflows, scoping, tool restrictions, and anti-patterns  |
+| [IDE Compatibility](ide-compatibility/01-overview.md)                   | Which editors support each primitive and how to configure them               |
+| [Reference Guides](reference/01-agents-guide.md)                        | Creating your own agents, skills, prompts, and instructions                  |
 
 ---
 

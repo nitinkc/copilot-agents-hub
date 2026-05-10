@@ -7,6 +7,7 @@ Reference documentation for creating and using Copilot agents.
 ## What Are Agents?
 
 Agents are:
+
 - **Specialized AI assistants** focused on a particular domain (MkDocs, security, API design, etc.)
 - **Discoverable** — appear in the `@` picker when relevant to your task
 - **Reusable** — shared across all your machines via GitHub

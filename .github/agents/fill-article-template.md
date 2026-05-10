@@ -58,7 +58,7 @@ A **complete, publishable Markdown file** containing:
 
 ---
 
-## Style Guid elines
+## Style Guidelines
 
 ### Tone
 - Clear and educational (not academic)

@@ -7,9 +7,13 @@
 
 ## Why Custom Agents Exist
 
-GitHub Copilot's default mode is a general-purpose assistant. It answers questions, writes code, and explains things — but it has no persistent context about your project's conventions, domain language, or preferred workflows.
+GitHub Copilot's default mode is a general-purpose assistant. It answers questions, writes code, 
+and explains things — but it has **no persistent context** about your project's conventions, 
+domain language, or preferred workflows.
 
-Custom agents solve this by letting you encode that knowledge permanently into a file that Copilot loads every time you invoke the agent. Think of it as giving Copilot a detailed job description before each conversation.
+Custom agents solve this by letting you encode that knowledge permanently into a file that Copilot 
+loads every time you invoke the agent. Think of it as giving Copilot a detailed job description 
+before each conversation.
 
 ---
 
@@ -55,14 +59,15 @@ Always add a blank line before bullet lists.
 
 ### 2. Instructions (`.instructions.md`)
 
-**Instructions** are passive, always-on rules that Copilot silently applies whenever it opens a matching file. They do not require any user action — they are loaded automatically based on file path patterns.
+**Instructions** are passive, always-on rules that Copilot silently applies whenever it opens a matching file. 
+They do not require any user action — they are loaded automatically based on file path patterns.
 
 **Two activation modes:**
 
-| Mode | How It Activates | Frontmatter Key |
-|---|---|---|
-| `applyTo` pattern | Automatically, when a file matching the glob is open | `applyTo: "docs/**/*.md"` |
-| `description` | On-demand, Copilot decides based on relevance | `description: "Use when editing Python files"` |
+| Mode              | How It Activates                                     | Frontmatter Key                                |
+|:------------------|:-----------------------------------------------------|:-----------------------------------------------|
+| `applyTo` pattern | Automatically, when a file matching the glob is open | `applyTo: "docs/**/*.md"`                      |
+| `description`     | On-demand, Copilot decides based on relevance        | `description: "Use when editing Python files"` |
 
 **Example — auto-applied to all markdown files:**
 
@@ -92,7 +97,8 @@ Every file must end with the abbreviations snippet.
 
 ### 3. Skills (`SKILL.md`)
 
-A **skill** is an on-demand knowledge package bundled with templates, scripts, and domain context. Unlike instructions (which are always passive), skills are loaded only when triggered by the user or another agent.
+A **skill** is an on-demand knowledge package bundled with templates, scripts, and domain context. 
+Unlike instructions (which are always passive), skills are loaded only when triggered by the user or another agent.
 
 **Structure of a skill bundle:**
 
@@ -113,17 +119,18 @@ A **skill** is an on-demand knowledge package bundled with templates, scripts, a
 
 **Comparison: Instructions vs Skills:**
 
-| | Instructions | Skills |
-|---|---|---|
+|            | Instructions                   | Skills                               |
+|:-----------|:-------------------------------|:-------------------------------------|
 | Activation | Automatic (applyTo) or passive | Explicit — user or agent triggers it |
-| Assets | None | Can include templates, scripts |
-| Best for | Always-on style rules | On-demand domain workflows |
+| Assets     | None                           | Can include templates, scripts       |
+| Best for   | Always-on style rules          | On-demand domain workflows           |
 
 ---
 
 ### 4. Prompts (`.prompt.md`)
 
-A **prompt** is a parameterized, single-task template. It appears as a slash command in chat and lets you invoke a common workflow with variable inputs.
+A **prompt** is a parameterized, single-task template. It appears as a slash command in chat and 
+lets you invoke a common workflow with variable inputs.
 
 **Example prompt — create a new doc section:**
 
@@ -146,11 +153,11 @@ at least two deep-dive placeholders.
 
 **Skills vs Prompts:**
 
-| | Prompts | Skills |
-|---|---|---|
-| Appears as | `/prompt-name` (slash command) | `/skill-name` (slash command) |
-| Bundled assets | No | Yes (templates, scripts) |
-| Best for | Single parameterized tasks | Multi-step workflows with assets |
+|                | Prompts                        | Skills                           |
+|:---------------|:-------------------------------|:---------------------------------|
+| Appears as     | `/prompt-name` (slash command) | `/skill-name` (slash command)    |
+| Bundled assets | No                             | Yes (templates, scripts)         |
+| Best for       | Single parameterized tasks     | Multi-step workflows with assets |
 
 ---
 
@@ -178,7 +185,8 @@ Copilot looks in two locations:
 
 ## The `description` Field Is Everything
 
-The `description` field in every frontmatter block is how Copilot's internal planner decides whether to load a file. If the trigger phrases are not in `description`, the agent, instruction, or skill will never be found.
+The `description` field in every frontmatter block is how Copilot's internal planner decides whether
+to load a file. If the trigger phrases are not in `description`, the agent, instruction, or skill will never be found.
 
 **Pattern that works:**
 

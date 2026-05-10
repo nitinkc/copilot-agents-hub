@@ -13,14 +13,14 @@ Welcome to the centralized AI agent repository! This guide will show you how to 
 
 When your repo syncs from **ai-core**, you receive:
 
-| Asset Type | Count | What It Is |
-|---|---|---|
-| **Agents** | 12-15 | Specialized AI roles for coding tasks (design, implement, test, review, etc.) |
-| **Skills** | 1-2 | Deep expertise packages for complex domains (Databricks, infrastructure) |
-| **Instructions** | 2-5 files | Tech-stack conventions and best practices |
-| **Prompts** | 1-2 | Reusable prompt templates |
-| **Templates** | 2-4 | Design templates and code examples |
-| **Guides** | 2-5 | How-to documentation |
+| Asset Type       | Count     | What It Is                                                                    |
+|:-----------------|:----------|:------------------------------------------------------------------------------|
+| **Agents**       | 12-15     | Specialized AI roles for coding tasks (design, implement, test, review, etc.) |
+| **Skills**       | 1-2       | Deep expertise packages for complex domains (Databricks, infrastructure)      |
+| **Instructions** | 2-5 files | Tech-stack conventions and best practices                                     |
+| **Prompts**      | 1-2       | Reusable prompt templates                                                     |
+| **Templates**    | 2-4       | Design templates and code examples                                            |
+| **Guides**       | 2-5       | How-to documentation                                                          |
 
 ---
 

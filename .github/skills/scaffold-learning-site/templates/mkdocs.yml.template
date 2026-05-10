@@ -14,12 +14,15 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - search.highlight
     - search.suggest
     - content.code.copy
+    - toc.integrate
+    - header.autohide
 
 site_name: "{TOPIC} — Learning Guide"
 site_description: "A progressive learning guide covering {TOPIC} from fundamentals to expert level"

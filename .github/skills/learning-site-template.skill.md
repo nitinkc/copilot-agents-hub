@@ -71,7 +71,6 @@ Agents to auto-generate:
 
 ### Article Structure
 Every article includes:
-1. Level badge (🟢🟡🔴)
 2. Pre-reading links
 3. Plain-language intro
 4. Main content with examples

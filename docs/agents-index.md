@@ -6,8 +6,8 @@ Registry of all available Copilot agents in this hub. Use the `@` picker in VS C
 
 ## Available Agents
 
-| Agent Name | Category | Purpose | Status |
-|---|---|---|---|
+| Agent Name       | Category      | Purpose                                                            | Status   |
+|:-----------------|:--------------|:-------------------------------------------------------------------|:---------|
 | `mkdocs-content` | Documentation | Create and manage MkDocs documentation with two-tier content model | ✅ Active |
 
 ---

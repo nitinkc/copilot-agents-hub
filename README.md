@@ -3,6 +3,7 @@
 Reusable repository for managing custom GitHub Copilot agents, prompts, instructions, and skills — synced across machines via Git.
 
 [https://nitinkc.github.io/copilot-agents-hub/](https://nitinkc.github.io/copilot-agents-hub/)
+
 ## Quick Start
 
 ```bash
@@ -42,12 +43,12 @@ mkdocs build
 # → output in site/
 ```
 
-| Section | Description |
-|---|---|
-| [Fundamentals](docs/fundamentals/01-core-concepts.md) | What agents, instructions, skills, and prompts are |
-| [Intermediate](docs/intermediate/01-working-together.md) | Composition patterns and real-world use cases |
-| [Advanced](docs/advanced/01-advanced-patterns.md) | Hooks, multi-agent pipelines, MCP, anti-patterns |
-| [IDE Compatibility](docs/ide-compatibility/01-overview.md) | VS Code, JetBrains, Visual Studio, Vim, CLI |
+| Section                                                    | Description                                        |
+|:-----------------------------------------------------------|:---------------------------------------------------|
+| [Fundamentals](docs/fundamentals/01-core-concepts.md)      | What agents, instructions, skills, and prompts are |
+| [Intermediate](docs/intermediate/01-working-together.md)   | Composition patterns and real-world use cases      |
+| [Advanced](docs/advanced/01-advanced-patterns.md)          | Hooks, multi-agent pipelines, MCP, anti-patterns   |
+| [IDE Compatibility](docs/ide-compatibility/01-overview.md) | VS Code, JetBrains, Visual Studio, Vim, CLI        |
 
 ## 🚀 scaffold-learning-site — Quick Usage Demo
 
@@ -73,22 +74,22 @@ Cloud implementations: Spanner, BigQuery, DynamoDB, Cassandra, MongoDB, PostgreS
 
 **Where each piece lives:**
 
-| File type | Location | Purpose |
-|---|---|---|
-| **Prompt** — `/scaffold-learning-site` | `.github/prompts/scaffold-learning-site.prompt.md` | The invocable command; tells Copilot what to do |
-| **Skill** — reference library | `.github/skills/scaffold-learning-site/SKILL.md` | Conventions, token map, template index |
-| **Templates** | `.github/skills/scaffold-learning-site/templates/` | Reusable file starters (mkdocs.yml, CSS, JS, article layouts) |
-| **Instructions** — auto-rules | `.github/instructions/application-instructions/mkdocs.instructions.md` | Style rules applied automatically when editing `docs/**/*.md` or `mkdocs.yml` |
-| **Agent** — persona | `.github/agents/01-mkdocs-content.agent.md` | `@mkdocs-content` — manages article creation, nav, cross-references |
+| File type                              | Location                                                               | Purpose                                                                       |
+|:---------------------------------------|:-----------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| **Prompt** — `/scaffold-learning-site` | `.github/prompts/scaffold-learning-site.prompt.md`                     | The invocable command; tells Copilot what to do                               |
+| **Skill** — reference library          | `.github/skills/scaffold-learning-site/SKILL.md`                       | Conventions, token map, template index                                        |
+| **Templates**                          | `.github/skills/scaffold-learning-site/templates/`                     | Reusable file starters (mkdocs.yml, CSS, JS, article layouts)                 |
+| **Instructions** — auto-rules          | `.github/instructions/application-instructions/mkdocs.instructions.md` | Style rules applied automatically when editing `docs/**/*.md` or `mkdocs.yml` |
+| **Agent** — persona                    | `.github/agents/01-mkdocs-content.agent.md`                            | `@mkdocs-content` — manages article creation, nav, cross-references           |
 
 **Rule of thumb for where to put what:**
 
-| Content type | Goes in |
-|---|---|
-| AI persona, role, decision logic, step-by-step workflows | **Agent** (`.agent.md`) |
-| Coding/style rules, known issues, templates auto-applied to files | **Instructions** (`.instructions.md`) |
-| Single-shot reusable task commands | **Prompts** (`.prompt.md`) |
-| Reference libraries, file templates, scaffolding patterns | **Skills** (`SKILL.md` + `templates/`) |
+| Content type                                                      | Goes in                                |
+|:------------------------------------------------------------------|:---------------------------------------|
+| AI persona, role, decision logic, step-by-step workflows          | **Agent** (`.agent.md`)                |
+| Coding/style rules, known issues, templates auto-applied to files | **Instructions** (`.instructions.md`)  |
+| Single-shot reusable task commands                                | **Prompts** (`.prompt.md`)             |
+| Reference libraries, file templates, scaffolding patterns         | **Skills** (`SKILL.md` + `templates/`) |
 
 ---
 
