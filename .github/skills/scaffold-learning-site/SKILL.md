@@ -1,6 +1,11 @@
 # Skill: scaffold-learning-site
 
-**Purpose:** Scaffold a complete MkDocs Material learning tutorial project from scratch for any technical topic — structured progressively from basics to expert level, with hover glossary, Mermaid diagrams, math rendering, dark/light mode, and interview Q&A blocks.
+**Purpose:** Scaffold a complete MkDocs Material learning tutorial project from scratch for any
+technical topic — structured progressively from basics to expert level, with 
+- hover glossary,
+- Mermaid diagrams, 
+- math rendering, 
+- dark/light mode, and 
 
 **Use this skill when the user says things like:**
 - "Create a learning site for..."

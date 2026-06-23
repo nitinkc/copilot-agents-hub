@@ -74,16 +74,6 @@ $$
 | GCP | {service} | {notes} |
 | Azure | {service} | {notes} |
 
----
-
-??? question "Interview Q: {question}?"
-    {Answer in 2–4 lines. Be precise and use the correct terminology.}
-
-??? question "Interview Q: {question}?"
-    {Answer in 2–4 lines.}
-
-??? question "Interview Q: {question}?"
-    {Answer in 2–4 lines.}
 
 ---
 

@@ -72,6 +72,37 @@ Sections: SQL vs NoSQL, ACID, Normalization, Indexing, Replication, Caching
 Cloud implementations: Spanner, BigQuery, DynamoDB, Cassandra, MongoDB, PostgreSQL
 ```
 
+## 🧪 create-lab — Quick Usage Demo
+
+Use `/create-lab` to generate a complete, ready-to-run hands-on lab for any domain and language.
+
+**Invoke it in Copilot Chat like this:**
+
+```
+/create-lab
+Domain: Data Engineering
+Topic: Stream processing with Kafka
+Level: Intermediate
+Language: Python
+Estimated time: 45 minutes
+```
+
+```
+/create-lab
+Domain: Web Development
+Topic: REST API error handling
+Level: Beginner
+Language: TypeScript / Express
+Estimated time: 30 minutes
+```
+
+Each invocation generates:
+
+- `lab_<topic>.md` — full lab document (objectives → instructions → rubric → expected outputs)
+- `lab_<topic>_starter.<ext>` — starter code with sequentially numbered, point-valued TODOs
+- `lab_<topic>_solution.<ext>` — reference solution (do not distribute to students)
+- `data/<topic>_data.<ext>` — realistic domain dataset with edge cases
+
 **Where each piece lives:**
 
 | File type                              | Location                                                               | Purpose                                                                       |
@@ -81,6 +112,8 @@ Cloud implementations: Spanner, BigQuery, DynamoDB, Cassandra, MongoDB, PostgreS
 | **Templates**                          | `.github/skills/scaffold-learning-site/templates/`                     | Reusable file starters (mkdocs.yml, CSS, JS, article layouts)                 |
 | **Instructions** — auto-rules          | `.github/instructions/application-instructions/mkdocs.instructions.md` | Style rules applied automatically when editing `docs/**/*.md` or `mkdocs.yml` |
 | **Agent** — persona                    | `.github/agents/01-mkdocs-content.agent.md`                            | `@mkdocs-content` — manages article creation, nav, cross-references           |
+| **Prompt** — `/create-lab`             | `.github/prompts/create-lab.prompt.md`                                 | Generate a complete hands-on lab: objectives, starter code, dataset, rubric, expected outputs |
+| **Instructions** — lab auto-rules      | `.github/instructions/lab.instructions.md`                             | Style and structure rules applied automatically when editing `lab_*.md` files  |
 
 **Rule of thumb for where to put what:**
 

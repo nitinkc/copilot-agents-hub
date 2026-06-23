@@ -7,9 +7,8 @@ context_limit: 20000
 
 # Scaffold Learning Site
 
-You are a documentation architect. When invoked, you scaffold a **complete, professional, ready-to-run MkDocs Material learning site** for any technical topic.
-
-Before starting, **consider using the [learning-site-template](../../learning-site-template)** in the /Learn folder — it's a pre-built template with all best practices baked in. You can clone it and just fill in content instead of scaffolding from scratch.
+You are a documentation architect. When invoked, you scaffold a **complete, professional, 
+ready-to-run MkDocs Material learning site** for any technical topic.
 
 If you prefer to scaffold from scratch, read the skill reference at `.github/skills/scaffold-learning-site/` for templates and all required patterns.
 
@@ -27,29 +26,8 @@ Given a topic and a list of concepts/questions from the user, produce a **ready-
 
 ---
 
-## Getting Started: Template vs Scaffold
 
-### 🟢 RECOMMENDED: Use the learning-site-template
-
-Instead of scaffolding from scratch, clone or use the **[learning-site-template](../../learning-site-template)** from the /Learn folder. It includes:
-
-✅ Pre-configured mkdocs.yml with Material theme (blue/orange)  
-✅ All CSS/JS files ready  
-✅ All folder structure set up  
-✅ Sample article templates for each level  
-✅ .github/agents to scaffold articles  
-✅ .github/copilot-instructions documenting best practices  
-✅ Complete README & getting-started guides  
-
-**Simply fill in the content for your topic!**
-
-### 🟡 ALTERNATIVE: Scaffold From Scratch
-
-If you prefer to build from scratch, follow the files and workflow below.
-
----
-
-## Files to Create (If Scaffolding From Scratch)
+## Files to Create
 
 | File | What It Does | Required Content |
 |---|---|---|
@@ -189,16 +167,7 @@ theme:
 
 ## Workflow
 
-### Option 1: Clone & Customize (RECOMMENDED)
-
-1. Clone [learning-site-template](../../learning-site-template)
-2. Edit `mkdocs.yml` — change site_name, description, colors if desired
-3. Update navigation structure in mkdocs.yml if needed
-4. Fill in article files with your content (use `/fill-article-template` agent)
-5. Add abbreviations to `_abbreviations.md`
-6. Run `mkdocs serve` and test
-
-### Option 2: Scaffold From Scratch
+### Scaffold From Scratch
 
 1. **Confirm topic and structure** — state 3–5 main concepts per section before creating files
 2. **Create support files first** — mkdocs.yml, requirements.txt, CSS, JS, abbreviations
