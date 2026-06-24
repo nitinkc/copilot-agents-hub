@@ -1,6 +1,7 @@
 # Git ignore file for Copilot Agents Hub
 
 # VS Code
+.vscode/
 .vscode/.history/
 .vscode/settings.local.json
 .vscode/*.log
@@ -10,7 +11,7 @@
 *.iml
 *.iws
 *.ipr
-.jetbrains/.idea/
+.jetbrains/
 
 # OS Files
 .DS_Store
